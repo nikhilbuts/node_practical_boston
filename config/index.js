@@ -5,7 +5,7 @@ const config = function () {
 	this.live_url = db.live_url;
 
 	this.dbLocal = {
-		'database' : 'node-practical-task-0102',
+		'database' : 'node-practical-boston',
 		'host' : '127.0.0.1',
 		'port' : '27017'	
 	}

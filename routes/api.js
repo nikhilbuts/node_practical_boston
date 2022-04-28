@@ -1,17 +1,13 @@
-const Service = require('../api/service/auth');
-const UserController = require('../api/controller/userController');
-const config = require('../config');
-const auth = require('./../api/service/auth');
+const orderController = require('../api/controller/orderController');
 
 module.exports = (router) => {
 
     /**
-     * Users API
+     * Orders API
      */
-    router.post('/api/v1/signup', UserController.signup);
-    router.post('/api/v1/login', UserController.login);
-    router.get('/api/v1/users',UserController.listOfUser);
-    router.patch('/api/v1/updateUser', Service.authenticate, UserController.updateUser);
-    router.delete('/api/v1/deleteUser', Service.authenticate, UserController.deleteUser);
+    router.post('/orders/create', orderController.createOrder);
+    router.get('/orders/list',orderController.listOfOrder);
+    router.patch('/orders/update', orderController.updateOrder);
+    router.delete('/orders/delete', orderController.deleteOrder);
 
 };

@@ -6,6 +6,7 @@ const router = express.Router();
 const http = require('http');
 const config = require('./config/index');
 const server = http.createServer(app);
+const session = require('express-session')
 
 app.use(session({
     secret: config.sessionSecret,
